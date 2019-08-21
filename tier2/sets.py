@@ -30,3 +30,5 @@ print(
 # there is also a set comprehension just like thw list comprehension
 set_comprehension = {x ** 2 for x in set_a}
 print(set_comprehension)
+
+# for an empty set, use the set function, set() as {} is an empty dictionary
