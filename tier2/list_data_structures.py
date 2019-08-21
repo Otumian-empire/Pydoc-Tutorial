@@ -103,3 +103,5 @@ del mylist[:]
 del new_list[:]
 del sqr_list[:]
 del sqr_list_1[:]
+
+# i forgot about nested list
