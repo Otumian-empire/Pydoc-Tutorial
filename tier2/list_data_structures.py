@@ -89,3 +89,17 @@ print("new list:", new_list, "mylist:", mylist)
 # similar approach is to use the copy method
 another_nl = mylist.copy()
 print("another new list:", another_nl, "my list:", mylist)
+
+# list comprehension
+sqr_list = list(map(lambda x:x ** 2, mylist))
+print(sqr_list)
+
+# new sqr list
+sqr_list_1 = [(x ** 2) for x in mylist]
+print(sqr_list_1)
+
+# it is time we move to other topic
+del mylist[:]
+del new_list[:]
+del sqr_list[:]
+del sqr_list_1[:]
