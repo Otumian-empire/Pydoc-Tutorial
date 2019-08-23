@@ -44,3 +44,19 @@ ZeroDivisionError: division by zero
 #     # except Exception as e:
 #     except (ValueError, NameError, TypeError) as e:
 #         print(f"error message: ({e})\nplease enter a number... the value you entered is not in example 1,2,3, ...")
+
+
+# # an instance of an exception may have a type and arguments
+# try:
+#     num = int(input('enter a number: '))
+#     print(f'you entered {num} and its double is {num * 2}')
+# except Exception as e:
+#     print(f'exception type: {type(e)}')
+#     print(f'exception arguments: {e.args}')
+#     print(f'exception message: {e}')
+# this would have an output like this
+# enter a number: q
+# exception type: < class 'ValueError' >
+# exception arguments: ("invalid literal for int() with base 10: 'q'",)
+# exception message: invalid literal for int() with base 10: 'q'
+
