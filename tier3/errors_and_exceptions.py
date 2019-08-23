@@ -26,3 +26,21 @@ ZeroDivisionError: division by zero
 # this isn't just an error, it is an exception error - not allowed (kind of)
 # any number divided by zero is undefine as such not permissible:
 # here i had a, ZeroDivisionError: division by zero
+
+
+# exception handling
+# using try and except
+# a simple program that asks the user to enter an integer
+# until the value entered is actually an integer or the user
+# terminates the program, then the program terminates
+# while True:
+#     try:
+#         num = int(input("Enter a number: "))
+#         print(f"you entered {num} and a doulbe of it is {num * 2}")
+#         print("great now you did well, terminate with Ctrl(Cmd) + C(Z)")
+#     # except ValueError:  # here we passed a ValueError Exception which means
+#         # that if we had a different exception othere than ValueError, the exception won't be handled
+#         # what we could do is pass in a general exception handler, Exception or add more exceptions to it
+#     # except Exception as e:
+#     except (ValueError, NameError, TypeError) as e:
+#         print(f"error message: ({e})\nplease enter a number... the value you entered is not in example 1,2,3, ...")
