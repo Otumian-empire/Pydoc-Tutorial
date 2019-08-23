@@ -60,3 +60,16 @@ ZeroDivisionError: division by zero
 # exception arguments: ("invalid literal for int() with base 10: 'q'",)
 # exception message: invalid literal for int() with base 10: 'q'
 
+
+# # raising exceptions
+# # programmer force an esception
+# raise NameError('my guy, this is a name error')
+# # this can done this way too, without braces
+# raise ValueError
+# # try to raise any unhandled error
+# try:
+#     raise NameError('I am raising a NameError')
+# except NameError:
+#     print("we had a NameError")
+#     raise  # this will raise any error as i do not want to handle it
+#     # or to say will raise any unhandled error
