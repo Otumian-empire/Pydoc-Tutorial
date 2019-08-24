@@ -28,7 +28,30 @@ class Calculator(OperandError, OperatorError):
         else:
             print("we can not do any calculation, fix the errors before")
 
+    def add(self):
+        """ returns the sum of the operands """
+        return self.operand_1 + self.operand_2
 
-my_calc = Calculator(3, '+', 3)
-# print(my_calc.evaluate())
-my_calc.calculate()
+    def difference(self):
+        """ returns the difference between the operands """
+        return self.operand_1 - self.operand_2
+
+    def product(self):
+        """ returns the product of the operands """
+        return self.operand_1 * self.operand_2
+
+    def pow(self):
+        """ returns the power of one operands to the exponent of the second operand """
+        return self.operand_1 ** self.operand_2
+
+    def mod(self):
+        """ returns the remainder of one operands when divided by the second operand """
+        return self.operand_1 % self.operand_2
+
+    def div(self):
+        """ return the ratio of one operands when divided by the second operand """
+        return self.operand_1 / self.operand_2
+
+    def floor_div(self):
+        """ return the quotient of one operands when divided by the second operand """
+        return self.operand_1 // self.operand_2
