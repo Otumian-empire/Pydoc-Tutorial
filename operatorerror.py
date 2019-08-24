@@ -1,6 +1,10 @@
 # user defined-exceptions
 # an exception handler class for the operator error
-class OperatorError(BaseException):
+# and extend or inherits CalculatorError
+from calculatorerror import CalculatorError
+
+
+class OperatorError(CalculatorError):
     """ exception handler for operator error """
 
     def __init__(self, operator):

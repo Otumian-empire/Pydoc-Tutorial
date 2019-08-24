@@ -1,6 +1,10 @@
 # user defined-exceptions
 # an exception handler class for operand errors
-class OperandError(BaseException):
+# and extend or inherits CalculatorError
+from calculatorerror import CalculatorError
+
+
+class OperandError(CalculatorError):
     """ exception handler for operand error """
 
     def __init__(self, operand):

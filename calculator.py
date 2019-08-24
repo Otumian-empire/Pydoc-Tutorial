@@ -1,3 +1,10 @@
+# user defined class that makes use of the sub classes of the CalculatorError class
+# CalculatorError class has the OperandError and OperatorError extending it
+# Calculator class uses these two subclasses to check for errors (operand and operator errors)
+from operanderror import OperandError
+from operatorerror import OperatorError
+
+
 class Calculator(OperandError, OperatorError):
     """ a class that makes use of OperandError and Operator error and works binarily"""
 
