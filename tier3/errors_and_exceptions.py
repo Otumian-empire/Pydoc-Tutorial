@@ -75,10 +75,6 @@ ZeroDivisionError: division by zero
 #     # or to say will raise any unhandled error
 
 
-# user defined-exceptions
-class BaseException(Exception):
-    """ Base class for my exception handlers """
-    pass
 
 
 class OperandError(BaseException):
