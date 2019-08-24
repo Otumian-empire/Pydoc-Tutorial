@@ -5,7 +5,7 @@ from operanderror import OperandError
 from operatorerror import OperatorError
 
 
-class Calculator(OperandError, OperatorError):
+class Calculator:
     """ a class that makes use of OperandError and Operator error and works binarily"""
 
     def __init__(self, operand_1, operator, operand_2):
