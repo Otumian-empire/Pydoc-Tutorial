@@ -73,3 +73,86 @@ ZeroDivisionError: division by zero
 #     print("we had a NameError")
 #     raise  # this will raise any error as i do not want to handle it
 #     # or to say will raise any unhandled error
+
+
+# user defined-exceptions
+class BaseException(Exception):
+    """ Base class for my exception handlers """
+    pass
+
+
+class OperandError(BaseException):
+    """ exception handler for operand error """
+
+    def __init__(self, operand):
+        self.operand = operand
+
+    def raise_OperandError(self):
+        """ raises an OperandError (this is Calculators version ValueError - values must of type int or float"""
+
+        operand_types = [int, float]
+
+        if type(self.operand) not in operand_types:
+            print(
+                f"OperandError: {repr(self.operand)}, is not an int() or a float() but of {type(self.operand)}")
+            return 0
+
+        return 1
+
+
+class OperatorError(BaseException):
+    """ exception handler for operator error """
+
+    def __init__(self, operator):
+        self.operator = operator
+
+    def raise_OperatorError(self):
+        """ raises an OperatorError (this is likely to be a SynthaxError as it is called when 
+        the operator is nor recognised)"""
+
+        operators = ['%', '*', '**', '-', '+', '/', '//']
+
+        if self.operator not in operators:
+            print(
+                f"OperatorError: {repr(self.operator)}, is not known, use any of {repr(operators)}")
+            return False
+
+        return True
+
+
+class Calculator:
+    """ a class that makes use of OperandError and Operator error and works binarily"""
+
+    def __init__(self, operand_1, operator, operand_2):
+        self.operand_1 = operand_1
+        self.operator = operator
+        self.operand_2 = operand_2
+
+    def evaluate(self):
+        opd_1_bool = OperandError(self.operand_1).raise_OperandError()
+        opt_bool = OperatorError(self.operator).raise_OperatorError()
+        opd_2_bool = OperandError(self.operand_2).raise_OperandError()
+
+        if not opd_1_bool or not opt_bool or not opd_2_bool:
+            return False
+        return True
+
+    def calculate(self):
+        if self.evaluate():
+            print("we can do some calculation")
+        else:
+            print("we can not do any calculation, fix the errors before")
+
+
+my_calc = Calculator(3, '+', 3)
+# print(my_calc.evaluate())
+my_calc.calculate()
+
+
+# print(f"stack trace: {self.with_traceback(None)}")
+# """
+# Traceback (most recent call last):
+# File "<stdin>", line 1, in <module>
+# ZeroDivisionError: division by zero
+#  """
+# read on how to create a traceback
