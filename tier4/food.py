@@ -12,10 +12,10 @@ class Food:
 
     def __init__(self, name):
         self.name = name  # instance variable (attr)
-        
 
     def set_fav_food(self, food: str):
         self.fav_food.append(food)
+
 
 person_a = Food('jerry')
 person_a.set_fav_food('rice and pancake')
