@@ -11,13 +11,21 @@ class OperandError(CalculatorError):
         self.operand = operand
 
     def raise_OperandError(self):
-        """ raises an OperandError (this is Calculators version ValueError - values must of type int or float"""
+        """ raises an OperandError (this is Calculators version ValueError/TypeError - values must of type int or float) when the operand type is neither an int or float and returns a bool, False else True """
 
         operand_types = [int, float]
 
         if type(self.operand) not in operand_types:
             print(
-                f"OperandError: {repr(self.operand)}, is not an int() or a float() but of {type(self.operand)}")
-            return 0
+                f"OperandError: {repr(self.operand)}, is not of type int or float but of {type(self.operand)}")
+            return False
 
-        return 1
+        return True
+
+    def raise_OperandZeroError(self):
+        """ raises an OperandZeroError (this is calculators version of ZeroDivisionError) - when (especially) the second operand passed, is zero and returns a bool,False else True """
+
+        if self.operand == 0:
+            return False
+
+        return True

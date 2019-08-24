@@ -17,7 +17,8 @@ class Calculator:
         """ returns True if there's no error else False """
         opd_1_bool = OperandError(self.operand_1).raise_OperandError()
         opt_bool = OperatorError(self.operator).raise_OperatorError()
-        opd_2_bool = OperandError(self.operand_2).raise_OperandError()
+        opd_2_bool = OperandError(
+            self.operand_2).raise_OperandError() and OperandError(self.operand_2).raise_OperandZeroError()
 
         if not opd_1_bool or not opt_bool or not opd_2_bool:
             return False
