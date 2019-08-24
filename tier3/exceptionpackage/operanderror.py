@@ -26,6 +26,8 @@ class OperandError(CalculatorError):
         """ raises an OperandZeroError (this is calculators version of ZeroDivisionError) - when (especially) the second operand passed, is zero and returns a bool,False else True """
 
         if self.operand == 0:
+            print(
+                f"OperandZeroError: a Non-Zero operand required, {repr(self.operand)} given")
             return False
 
         return True

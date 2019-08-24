@@ -43,7 +43,6 @@ class Calculator:
                 return self.mod()
             else:
                 exit
-            print("we can do some calculation")
         else:
             print("we can not do any calculation, fix the errors before")
 
