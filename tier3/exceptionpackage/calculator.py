@@ -18,7 +18,7 @@ class Calculator:
         opd_1_bool = OperandError(self.operand_1).raise_OperandError()
         opt_bool = OperatorError(self.operator).raise_OperatorError()
         opd_2_bool = OperandError(
-            self.operand_2).raise_OperandError() and OperandError(self.operand_2).raise_OperandZeroError()
+            self.operand_2).raise_OperandError()
 
         if not opd_1_bool or not opt_bool or not opd_2_bool:
             return False
@@ -35,11 +35,11 @@ class Calculator:
                 return self.product()
             elif self.operator == '**':
                 return self.pow()
-            elif self.operator == '/':
+            elif self.operator == '/' and OperandError(self.operand_2).raise_OperandZeroError():
                 return self.div()
-            elif self.operator == '//':
+            elif self.operator == '//' and OperandError(self.operand_2).raise_OperandZeroError():
                 return self.floor_div()
-            elif self.operator == '%':
+            elif self.operator == '%' and OperandError(self.operand_2).raise_OperandZeroError():
                 return self.mod()
             else:
                 exit
