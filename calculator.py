@@ -26,6 +26,22 @@ class Calculator:
     def calculate(self):
         """ returns the computated value of a calculation """
         if self.evaluate():
+            if self.operator == '+':
+                return self.add()
+            elif self.operator == '-':
+                return self.difference()
+            elif self.operator == '*':
+                return self.product()
+            elif self.operator == '**':
+                return self.pow()
+            elif self.operator == '/':
+                return self.div()
+            elif self.operator == '//':
+                return self.floor_div()
+            elif self.operator == '%':
+                return self.mod()
+            else:
+                exit
             print("we can do some calculation")
         else:
             print("we can not do any calculation, fix the errors before")
