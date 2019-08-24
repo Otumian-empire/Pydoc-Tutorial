@@ -14,6 +14,7 @@ class Calculator:
         self.operand_2 = operand_2
 
     def evaluate(self):
+        """ returns True if there's no error else False """
         opd_1_bool = OperandError(self.operand_1).raise_OperandError()
         opt_bool = OperatorError(self.operator).raise_OperatorError()
         opd_2_bool = OperandError(self.operand_2).raise_OperandError()
@@ -23,6 +24,7 @@ class Calculator:
         return True
 
     def calculate(self):
+        """ returns the computated value of a calculation """
         if self.evaluate():
             print("we can do some calculation")
         else:
