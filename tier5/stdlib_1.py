@@ -1,5 +1,6 @@
 # Brief Tour of the Standard Library
 
+import sys  # cmdline
 import glob  # list of a wildcard search
 import shutil  # file and directory system interface
 import os  # operating system interface
@@ -28,3 +29,8 @@ import os  # operating system interface
 
 # working briefly with the glob module
 # print(glob.glob('../*'))  # read all that ends with .py
+
+# working briefly with the sys module
+print(sys.argv)
+print(sys.stderr.write("error"))
+sys.exit()
