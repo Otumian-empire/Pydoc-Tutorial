@@ -1,5 +1,8 @@
 # Brief Tour of the Standard Library
 
+import statistics
+import random
+import math
 import sys  # cmdline
 import glob  # list of a wildcard search
 import shutil  # file and directory system interface
@@ -31,6 +34,15 @@ import os  # operating system interface
 # print(glob.glob('../*'))  # read all that ends with .py
 
 # working briefly with the sys module
-print(sys.argv)
-print(sys.stderr.write("error"))
-sys.exit()
+# print(sys.argv)
+# print(sys.stderr.write("error"))
+# sys.exit()
+
+# working briefly with the math module
+print(f"The area of a circle of 3cm is {math.pi * math.pow(3, 2):.2f}cm^2")
+
+# working briefly with the random module
+print(random.randint(1, 10))
+
+# working briefly with the statistics module
+print("The mean of [2,3,5]", statistics.mean([2, 3, 5]))
