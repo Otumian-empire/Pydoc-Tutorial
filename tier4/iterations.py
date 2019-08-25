@@ -11,3 +11,5 @@ it_mylist = iter(mylist)
 # print(next(it_mylist))
 # print(next(it_mylist))
 
+# this is supposed to be about iterators and generators
+# the material in the pydoc is not much, life goes on
